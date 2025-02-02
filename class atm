@@ -9,40 +9,14 @@ class ATM
    void pin();
    void correctpin(int p);
     void debit(int d,int bal);
-    void show(int b);
+   void show(int c);
     void credit(int c);
     
 };
-void ATM::debit(int d,int bal)
-{cout<<"Amount debited";
-    bal=bal-d;
-    ATM ob1;
-    ob1.show(bal);}
-
-void ATM::credit(int c)
+void ATM::show(int d)
 {
-    cout<<"amount credited";
-    bal=bal+c; 
-    ATM ob;
-    ob.show(bal);
-
-}
-
-// void show(int b)
-// {
-//     cout<<"Balance remain";
-//     cout<<b;
-// }
-void ATM::correctpin(int p)
-{int cor = 1234;
-    if(cor==p)
-    {
-        cout<<"correct pin";
-    }
-    else
-    {
-        cout<<"incorrect pin";
-    }
+    cout<<"Balance remain:-";
+    cout<<d;
 }
 void ATM::pin()
 {
@@ -53,6 +27,36 @@ void ATM::pin()
     ob.correctpin(p);
 }
 
+void ATM::debit(int d,int bal)
+{ATM deb;
+    cout<<"Amount debited";
+    deb.bal=deb.bal-d;
+    show(deb.bal);
+
+    }
+
+void ATM::credit(int c)
+{
+    cout<<"amount credited";
+    bal=bal+c; 
+    ATM ob2;
+ // ob2.show(bal);
+
+}
+
+
+void ATM::correctpin(int p)
+{int cor = 1234;
+    if(cor==p)
+    {
+        cout<<"correct pin"<<endl;
+    }
+    else
+    {
+        cout<<"incorrect pin"<<endl;
+    }
+}
+
 
 
 
@@ -60,6 +64,8 @@ int main()
 {
     ATM ob4;
     ob4.pin();
+    ob4.show();
+
   
     
     
