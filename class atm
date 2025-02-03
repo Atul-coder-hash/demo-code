@@ -56,7 +56,8 @@ void ATM::option()
                     
     
         case 5:
-                cout<<"<-------Program ended-------->";
+                cout<<"<-------Program ended-------->"<<endl;
+                cout<<"Thanks for using ATM";
                                 break;
        }
 }
@@ -120,14 +121,4 @@ int main()
     ATM ob4;
 
     ob4.pin();
-    
-    ///ob4.option();
-   // ob4.debit(100);
-   // ob4.credit(500);
-  
-    //ob4.show();
-
-  
-    
-    
 }
