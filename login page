@@ -1,0 +1,60 @@
+#include<iostream>
+using namespace std;
+
+class login
+{
+    public:
+    
+
+           void  name();
+            void password();
+};
+void checkuser(string n)
+{string nme ="ashwani_bis29";
+    if(nme==n)
+    {
+        cout<<"correct username"<<endl;
+    }
+    else{
+        cout<<"incorrect username"<<endl;
+    }
+}
+void checkpass(int n)
+{  int password=1234;
+    if(password==n)
+    {
+        cout<<"correct password"<<endl;
+    }
+    else{
+        cout<<"incorrect password"<<endl;
+    }
+
+
+}
+void login:: name()
+{
+    string n;
+    cout<<"enter username:-"<<endl;
+    cin>>n;
+    password();
+    checkuser(n);
+    
+}
+void login::password()
+{int p;
+  
+cout<<"enter pasword"<<endl;
+cin>>p;
+checkpass(p);
+ 
+
+}
+int main()
+{
+    cout<<"~~~~~~~~~~~WELCOME~~~~~~~~~~"<<endl;
+    login detail;
+    detail.name();
+    
+
+
+}
