@@ -6,45 +6,64 @@ class ATM
 
   public:
   int bal =1000;
+  int cor = 1234;
   void option();
    void pin();
    void correctpin(int p);
     void debit(int d);
    void show();
     void credit(int c);
+    friend int newpin(ATM atm);
+    
     
 };
 void ATM::option()
 {ATM r;
     int a,b;
 
-
-        cout<<"1.debit"<<endl;    
-        cout<<"2.credit"<<endl;
-       cout<<"3.Balance"<<endl;
-       cout<<"4. Exit"<<endl;
-       cout<<"5.change pin"<<endl;
-       cout<<"enter option:-";
+        cout<<"1.Debit"<<"   "<<"2.Credit"<<endl;    
+        //cout<<<<endl;
+       cout<<"3.Balance"<<"   "<<"4.Change pin"<<endl;
+       cout<<"5.Exit"<<endl;
+       cout<<"enter option:-"<<endl;
        cin>>a;
+       
+       
        switch(a)
        {
         case 1:cout<<"enter amount:-";
                     cin>>b;
                     r.debit(b);
+                    r.option();
                     break;
         case 2:cout<<"enter amount:-";
                     cin>>b;
                     r.credit(b);
+                    r.option();
                     break;
          case 3:cout<<"Balance-";
                     r.show();
+                    r.option();
+                    break;
+        case 4: cout<<"enter new pin:-"<<endl;
+                    cin>>b;
+                    r.cor=b;
+                    cout<<"pin changed";
+                    cout<<r.cor<<endl;
+                    r.option();
+                    break;
+       
+                    
     
-
+        case 5:
+                cout<<"<-------Program ended-------->";
+                                break;
        }
+}
+
 
     
 
-}
 void ATM::show()
 {ATM baln;
     cout<<"Balance remain:-";
@@ -80,7 +99,7 @@ void ATM::credit(int c)
 
 void ATM::correctpin(int p)
 {ATM opt;
-    int cor = 1234;
+    
     if(cor==p)
     {
         
@@ -101,6 +120,7 @@ int main()
     ATM ob4;
 
     ob4.pin();
+    
     ///ob4.option();
    // ob4.debit(100);
    // ob4.credit(500);
