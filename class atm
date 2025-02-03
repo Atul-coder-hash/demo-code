@@ -6,13 +6,22 @@ class ATM
 
   public:
   int bal =1000;
+  void option();
    void pin();
    void correctpin(int p);
-    void debit(int d,int bal);
+    void debit(int d);
    void show(int c);
     void credit(int c);
     
 };
+void option()
+{ATM opt;
+    do{
+        cout<<"1.debit"<<endl;
+       cin>>opt.bal
+
+    }
+}
 void ATM::show(int d)
 {
     cout<<"Balance remain:-";
@@ -27,20 +36,21 @@ void ATM::pin()
     ob.correctpin(p);
 }
 
-void ATM::debit(int d,int bal)
+void ATM::debit(int d)
 {ATM deb;
-    cout<<"Amount debited";
+    cout<<"Amount debited:-";
     deb.bal=deb.bal-d;
-    show(deb.bal);
+    cout<<deb.bal<<endl;
+    //show(deb.bal);
 
     }
 
 void ATM::credit(int c)
-{
-    cout<<"amount credited";
-    bal=bal+c; 
-    ATM ob2;
- // ob2.show(bal);
+{ATM cre;
+    cout<<"amount credited:-";
+    cre.bal=cre.bal+c; 
+    cout<<cre.bal<<endl;
+ 
 
 }
 
@@ -64,7 +74,10 @@ int main()
 {
     ATM ob4;
     ob4.pin();
-    ob4.show();
+    ob4.debit(100);
+    ob4.credit(500);
+    
+    //ob4.show();
 
   
     
