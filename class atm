@@ -22,7 +22,6 @@ void ATM::option()
     int a,b;
 
         cout<<"1.Debit"<<"   "<<"2.Credit"<<endl;    
-        //cout<<<<endl;
        cout<<"3.Balance"<<"   "<<"4.Change pin"<<endl;
        cout<<"5.Exit"<<endl;
        cout<<"enter option:-"<<endl;
@@ -84,7 +83,7 @@ void ATM::debit(int d)
     cout<<"Amount debited:-";
     deb.bal=deb.bal-d;
     cout<<deb.bal<<endl;
-    //show(deb.bal);
+
 
     }
 
